@@ -13,3 +13,8 @@
     height: 4.5em;
     padding: 0.2em;
 } 
+.clicked {
+    background-color: rgb(90, 89, 78); 
+    color: white;
+}
+
