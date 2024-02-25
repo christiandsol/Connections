@@ -35,11 +35,15 @@ export default function App() {
         { word: "purple", color: PURPLE },
     ]
     const handleClick = (index) => {
-        if (choices.length >= 4) {
+        if (choices.length > 4) {
             return;
         }
         if (choices.includes(index)) {
-            choices.splice(choices.indexOf(index), 1);
+            setChoices(choices.filter((choice) => choice !== index));
+            console.log("includes");
+            return;
+        }
+        if (choices.length === 4) {
             return;
         }
         setChoices([...choices, index]);
