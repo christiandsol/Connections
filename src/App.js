@@ -49,7 +49,25 @@ export default function App() {
         setChoices([...choices, index]);
     }
     const checkCorrect = (choices) => {
-        console.log(choices); 
+        if (words[choices[0]].color === words[choices[1]].color && words[choices[1]].color === words[choices[2]].color && words[choices[2]].color === words[choices[3]].color) {
+            switch (words[choices[0]].color) {
+                case YELLOW:
+                    setHasYellow(true);
+                    console.log("yellow");
+                    break;
+                case GREEN:
+                    setHasGreen(true);
+                    break;
+                case BLUE:
+                    setHasBlue(true);
+                    break;
+                case PURPLE:
+                    setHasPurple(true);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     return (
